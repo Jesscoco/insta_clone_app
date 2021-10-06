@@ -1,0 +1,16 @@
+<h1>COnfirmation du post</h1>
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+  <!-- Description pour afficher l'image téléchargée -->
+  <%= image_tag(@post.picture.url) if @post.picture && @post.picture.url %>
+  <%= form.hidden_field :picture_cache %>
+  <div>
+    <%= form.hidden_field :comment %> 
+    <br>
+    </div>
+  <%= form.submit "Poster" %>
+<% end %>
+<%= form_with(model:@post, url:new_post_path, local:true, method:"get") do |form| %>
+  <%= form.hidden_field :picture_cache %>
+  <%= form.submit "Retour", name: "back" %>
+<% end %>
+
