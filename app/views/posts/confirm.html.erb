@@ -2,6 +2,8 @@
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <!-- Description pour afficher l'image téléchargée -->
   <%= image_tag(@post.picture.url) if @post.picture && @post.picture.url %>
+    <%= form.hidden_field :picture %>
+
   <%= form.hidden_field :picture_cache %>
   <div>
     <%= form.hidden_field :comment %> 

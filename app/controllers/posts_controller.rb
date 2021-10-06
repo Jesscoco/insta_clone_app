@@ -12,6 +12,9 @@ class PostsController < ApplicationController
     @posts= Post.all
   end
 
+  def show
+    @favorite = current_user.favorites.find_by(post_id: @post.id)
+  end
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
@@ -19,7 +22,8 @@ class PostsController < ApplicationController
       render :new
      else
        if @post.save
-         flash[:notice] = " Post posté avec succès" 
+         flash[:notice] = "Post posté avec succès" 
+         PostMailer.post_mail(current_user).deliver
          redirect_to posts_path
        else
          render new_post_path
