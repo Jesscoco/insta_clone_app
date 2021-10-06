@@ -5,5 +5,5 @@
 <p> Name :<%= @user.name %> </p>
 <p> Email :<%=@user.email %> </p>
  
-<%= link_to "Logout", session_path(current_user.id), method: :delete %>
 <%= link_to "Edit profil ", edit_user_path(@user) %>
+ <%= link_to "Liste des posts" , posts_path %> 

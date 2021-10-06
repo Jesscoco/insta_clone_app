@@ -17,8 +17,10 @@
         <td><%= post.comment %></td>
         <td><%= post.user.name %></td> 
         <td><%= link_to "Show" , post_path(post.id) %></td>
+        <%  if current_user==post.user %>
         <td><%= link_to "Edit" , edit_post_path(post.id) %></td>
         <td><%= link_to "Destroy" , post ,method: "delete", data: {confirm: "Etes vous sur de vouloir supprimer?"} %> </td>
+        <% end %>
       </tr>     
     <% end %>
   </tbody>
