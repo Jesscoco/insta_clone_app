@@ -5,6 +5,10 @@
     <div class="container">
         
         <div class="side">
+        <div class="top">
+            <%= image_tag "instaic.jpeg" , class:"instaic", alt:"Instagram-clone icons" %>
+            <h1> Instagram Clone</h1>
+        </div> 
             <div class="forms">
                 <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
                 <%= f.email_field :email , class:"field", placeholder: 'Adresse e-mail' %>

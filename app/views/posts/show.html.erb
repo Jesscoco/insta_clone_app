@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Image:</strong>
-  <% if @post.image && @post.image.url %>
-  <%= image_tag @post.image.url , height: "250px" %>
+  <strong>Picture:</strong>
+  <% if @post.picture && @post.picture.url %>
+  <%= image_tag @post.picture.url , height: "300px" %>
   <% end %>
 </p>
 <%= link_to 'Edit', edit_post_path(@post) %> 

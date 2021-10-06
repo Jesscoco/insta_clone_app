@@ -1,8 +1,5 @@
 <%= form_with(model: @post, local: true, url:choose_new_or_edit) do |form| %>
-    <% content_for :head do %>
-    <link rel="stylesheet" href="new.scss">
-    <% end %>
-  <% if @post.errors.any? %>
+    <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2> il y a <%= @post.errors.count %> erreurs</h2>
       <ul>
@@ -18,14 +15,14 @@
     <br>
     </div>
 
-    <%= form.file_field :image %>
-    <%= form.hidden_field :image_cache %>
+    <%= form.file_field :picture %>
+    <%= form.hidden_field :picture_cache %>
         <div class="actions">
         <br>
         <br>
-        <%= form.submit %>
+        <%= form.submit class:"btnsbt" %>
+        <button> <%= link_to "Liste des posts" , posts_path, class:"buttons" %> </button>
     </div>
-    <div class="buttons">
-        <button> <%= link_to "Liste des posts" , posts_path %> </button>
-    </div>
+            
+    
 <% end %>

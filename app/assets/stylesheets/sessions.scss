@@ -1,51 +1,66 @@
 html{
-    background-color: #f0f2f5;
+    background-color: #ffffff;
 }
+
 /*body{line-height: 1.34}*/
+h1{
+    font-family: -apple-system, BlinkMacSystemFont;
+    }
+.side{
+    padding-left: 450px;
+    margin-top: 20px;
+    justify-self: center;
+}
+.top{
+    padding-left: 65px;
+    justify-content: center;
+}
 h2{
     color:#1c1e21;
     font-family: Helvetica, sans-serif;
     width: 378px;
     height: 104px;
 }
-.logo{
-    padding: 112px 0px 16px;
+.instaic{
+    padding-left:50px ;
+    width: 50px;
+    height: 50px;
 }
 
 .forms{
-    width: 396px;
+    width: 300px;
     height: 320px;
     align-items: center;
     border:none;
-    border-radius: 0 2px;
+    border-radius: 0 1px;
     line-height: 2;
     box-sizing: border-box;
     margin: 40px 0 0;
     padding: 20px 0 28px;
 }
 .item{
-    width: 396px;
-    height: 36px;
+    width: 300px;
+    height: 30px;
     text-align: center;
 }
 .items{
     margin-left: 100px;
 }
 .field{
-    width: 364px;
-    height: 22px;
+    width: 300px;
+    height: 16px;
     background-color: white;
-    font-size: 17px;
-    padding: 14px 16px;
-    margin: 10px;
-    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin: 8px;
+    border-radius: 4px;
 }
 .btnlog{
-    width: 364px;
-    font-weight: bold;
+    width: 300px;
+    font-weight: semibold;
     color: white;
-    background-color: #1877f2;
-    height: 24px;
+    background-color: #4c81c5;
+    height: 20px;
     font-size: 17px;
     padding: 16px 16px;
     border-radius: 4px;
@@ -61,6 +76,6 @@ h2{
     background-color: rgb(3, 150, 3);
     height: 24px;
     padding: 8px 26px;
-    font-size: 17px;
-    margin-left: 150px;
+    font-size: 14px;
+    margin-left: 120px;
 }

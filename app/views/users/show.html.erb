@@ -1,4 +1,9 @@
-<h1> Sign in </h1>
+<h1> <strong>Sign in </strong></h1>
+<% if @user.profile_pic && @user.profile_pic.url %>
+  <%= image_tag @user.profile_pic.url , class: "profilepic" %>
+  <% end %>
 <p> Name :<%= @user.name %> </p>
 <p> Email :<%=@user.email %> </p>
+ 
 <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+<%= link_to "Edit profil ", edit_user_path(@user) %>

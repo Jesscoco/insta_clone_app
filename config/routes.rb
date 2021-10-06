@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'posts/index'
   root 'sessions#new'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :edit, :update]
 end

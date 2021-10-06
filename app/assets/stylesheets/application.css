@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.linkfot{
+    float: left;
+    vertical-align: middle;
+    padding: 0;
+    padding-left: 300px;
+    text-align: left;
+}
+li{
+    margin-left: 10px;
+    list-style: none;
+    color: rgb(129, 127, 127);
+    display: inline;
+}
+.profilepic{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
