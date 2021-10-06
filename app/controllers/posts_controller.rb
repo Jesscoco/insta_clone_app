@@ -23,7 +23,7 @@ class PostsController < ApplicationController
      else
        if @post.save
          flash[:notice] = "Post posté avec succès" 
-         PostMailer.post_mail(current_user).deliver
+         #PostMailer.post_mail(current_user).deliver
          redirect_to posts_path
        else
          render new_post_path
